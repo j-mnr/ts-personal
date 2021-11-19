@@ -1,4 +1,6 @@
-import layout from "./layout";
+import ClassNames from "./classNames.js";
+import Ghost from "./ghost.js";
+import layout from "./layout.js";
 
 const scoreDisplay = document.getElementById("score") as HTMLSpanElement;
 const width = 28;
@@ -11,13 +13,13 @@ function createBoard() {
     const square = document.createElement("div") as HTMLDivElement;
     grid.appendChild(square);
     if (v === 0) {
-      square.classList.add("pac-dot");
+      square.classList.add(ClassNames.Dot);
     } else if (v === 1) {
-      square.classList.add("wall");
+      square.classList.add(ClassNames.Wall);
     } else if (v === 2) {
-      square.classList.add("ghost-lair");
+      square.classList.add(ClassNames.Lair);
     } else if (v === 3) {
-      square.classList.add("power-pellet");
+      square.classList.add(ClassNames.Pellet);
     }
     squares.push(square);
   });
@@ -25,17 +27,17 @@ function createBoard() {
 createBoard();
 
 let pacmanCurrentIndex = 490;
-squares[pacmanCurrentIndex].classList.add("pac-man");
+squares[pacmanCurrentIndex]?.classList.add(ClassNames.Pacman);
 
 function isOpenSpace(idx: number): boolean {
   return (
-    !squares[idx].classList.contains("wall") &&
-    !squares[idx].classList.contains("ghost-lair")
+    !squares[idx]?.classList.contains(ClassNames.Wall) &&
+    !squares[idx]?.classList.contains(ClassNames.Lair)
   );
 }
 
 function movePacman(e: KeyboardEvent) {
-  squares[pacmanCurrentIndex].classList.remove("pac-man");
+  squares[pacmanCurrentIndex]?.classList.remove(ClassNames.Pacman);
   if (e.key === "a") {
     if (pacmanCurrentIndex % width !== 0 && isOpenSpace(pacmanCurrentIndex - 1))
       pacmanCurrentIndex -= 1;
@@ -62,10 +64,44 @@ function movePacman(e: KeyboardEvent) {
     )
       pacmanCurrentIndex += width;
   }
-  squares[pacmanCurrentIndex].classList.add("pac-man");
-  // TODO: pacDotEaten()
-  // TODO: powerPelletEaten()
+  squares[pacmanCurrentIndex]?.classList.add(ClassNames.Pacman);
+  pacDotEaten();
+  powerPelletEaten();
   // TODO: checkForGameOver()
   // TODO: checkForWin()
 }
+
+function pacDotEaten() {
+  if (!squares[pacmanCurrentIndex]?.classList.contains(ClassNames.Dot)) return;
+
+  score += 1;
+  scoreDisplay.innerHTML = `${score}`;
+  squares[pacmanCurrentIndex]?.classList.remove(ClassNames.Dot);
+}
+
+function powerPelletEaten() {
+  if (!squares[pacmanCurrentIndex]?.classList.contains(ClassNames.Pellet))
+    return;
+
+  score += 10;
+  ghosts.forEach((g) => g.toggleScared());
+  setTimeout(() => ghosts.forEach((g) => g.toggleScared()), 10000);
+  ghosts[0]!.timerId = setInterval("wat");
+  squares[pacmanCurrentIndex]?.classList.remove(ClassNames.Pellet);
+}
+
+const ghosts = [
+  new Ghost("blinky", 348, 250),
+  new Ghost("pinky", 376, 400),
+  new Ghost("inky", 351, 300),
+  new Ghost("clyde", 379, 500),
+];
+
+// TODO: scare ghosts
+// TODO: move ghosts
+ghosts.forEach((g) => {
+  squares[g.currIdx]?.classList.add(g.className);
+  squares[g.currIdx]?.classList.add(ClassNames.Ghost);
+});
+
 document.addEventListener("keydown", movePacman);
