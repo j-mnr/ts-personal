@@ -1,3 +1,3 @@
-export function twoFer(name?: string): string {
-  return `One for ${name || "you"}, one for me.`;
+export function twoFer(name: string = "you"): string {
+  return `One for ${name}, one for me.`;
 }
