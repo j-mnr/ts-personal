@@ -1,0 +1,81 @@
+<header>
+  <label for="toggle"><span class="fas fa-bars"></span></label>
+  <input type="checkbox" id="toggle" />
+
+  <div routerLink="/" class="brand">
+    <img src="../../assets/images/brand/final-brand.png" class="brand-logo" />
+  </div>
+
+  <div class="search-container">
+    <div class="custom-select">
+      <select
+        name="category"
+        id="search-select"
+        #selectOption
+        (change)="updateCarousels()"
+      >
+        <option value="all" selected>All</option>
+        <option value="cpu">CPUs</option>
+        <option value="videocard">Video Cards</option>
+        <option value="computercase">Computer Cases</option>
+        <option value="ram">RAM</option>
+        <option value="motherboard">Motherboards</option>
+        <option value="ssd">Solid State Drives</option>
+        <option value="hdd">Hard Disk Drives</option>
+        <option value="powersupply">Power Supplies</option>
+      </select>
+    </div>
+    <div
+      class="search-bar"
+      [style.visibility]="selectOption.value == 'all' ? 'hidden' : 'visible'"
+    >
+      <input
+        #searchBox
+        (input)="searchCarousel()"
+        type="search"
+        placeholder="Search.."
+      />
+      <span class="fas fa-search fa-lg icon"></span>
+    </div>
+  </div>
+
+  <div *ngIf="isLoggedIn" class="nav-links">
+    <div class="options-dropdown">
+      <button class="options-dropdown__btn">Account</button>
+      <ul class="options-dropdown__content">
+        <li
+          class="options-dropdown__item"
+          routerLink="/user/{{ username }}/profile"
+        >
+          Profile
+        </li>
+        <li
+          class="options-dropdown__item"
+          routerLink="/user/{{ username }}/orders"
+        >
+          Orders
+        </li>
+        <li class="options-dropdown__item" (click)="logout()">Log-out</li>
+      </ul>
+    </div>
+    <!-- TODO pull in FA Avatar / Picture -->
+    <!-- <button class="userdetails">
+          <img src="" alt="" />
+          {{ username }}
+        </button> -->
+    <div routerLink="/user/{{ username }}/cart" class="shopping-cart">
+      <i class="fas fa-shopping-cart fa-2x"></i>
+      <span class="badge" id="counter"
+        ><strong>{{ cartItemTotal }}</strong></span
+      >
+    </div>
+  </div>
+
+  <div *ngIf="!isLoggedIn">
+    <h3>
+      <a id="signup" routerLink="/sign-up">Sign-up</a>
+      <b> / </b>
+      <a id="login" routerLink="/login">Log-in </a>
+    </h3>
+  </div>
+</header>

@@ -1,0 +1,78 @@
+<main class="register-container">
+  <form [formGroup]="signupForm" (ngSubmit)="signup()">
+    <div class="form__group">
+      <label for="email" id="emailLabel">Email Address</label>
+      <input
+        [formControlName]="'email'"
+        id="email"
+        type="email"
+        autofocus
+        autocomplete="email"
+      />
+      <span
+        *ngIf="
+          !signupForm.get('email')?.valid && signupForm.get('email')?.touched
+        "
+        >Please provide a valid email</span
+      >
+    </div>
+
+    <div class="form__group">
+      <label for="username">Username</label>
+      <input
+        [formControlName]="'username'"
+        id="username"
+        type="text"
+        maxlength="20"
+        autocomplete="username"
+      />
+      <span
+        *ngIf="
+          !signupForm.get('username')?.valid &&
+          signupForm.get('username')?.touched
+        "
+        >Please provide a valid username</span
+      >
+    </div>
+
+    <div class="form__group">
+      <label for="password">Password</label>
+      <input
+        [formControlName]="'password'"
+        id="password"
+        type="password"
+        maxlength="20"
+        autocomplete="current-password"
+      />
+      <span
+        *ngIf="
+          !signupForm.get('password')?.valid &&
+          signupForm.get('password')?.touched
+        "
+        >Please provide a valid password</span
+      >
+    </div>
+
+    <div
+      class="form__group"
+      [class.passwords_match]="passwordsMatch"
+      [class.passwords_no_match]="!passwordsMatch"
+    >
+      <label for="confirmPassword">Confirm Password</label>
+      <input
+        (input)="checkPasswords()"
+        #confirmPassword
+        type="password"
+        maxlength="20"
+        autocomplete="current-password"
+      />
+      <span *ngIf="!passwordsMatch"> Passwords Do Not Match </span>
+    </div>
+
+    <div class="form__group">
+      <button type="submit" [disabled]="!this.signupForm.valid" [className]="this.signupForm.valid && passwordsMatch ? 'enabled' : 'disabled'">
+        Sign up
+      </button>
+    </div>
+  </form>
+</main>

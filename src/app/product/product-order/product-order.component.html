@@ -1,0 +1,38 @@
+<div class="product-order">
+  <img
+    src="https://circuit-commerce-assets.s3.amazonaws.com/{{
+      product.modelNumber
+    }}.png"
+    alt=""
+    class="product-order__image"
+  />
+  <div class="product-order__info">
+    <p class="product-order__title">{{ product.title }}</p>
+
+    <h3>{{ product.modelNumber }}</h3>
+    <img
+      class="product-order__brand"
+      src="https://circuit-commerce-assets.s3.amazonaws.com/{{
+        product.brand
+      }}.png"
+      alt=""
+    />
+    <p class="product-order__price">
+      <small>$</small>
+      <strong> {{ product.price }} </strong>
+    </p>
+
+    <div class="product-order__rating">
+      <!-- TODO create an array filled with ⭐ to show off rating -->
+      <!-- <span> ⭐⭐⭐⭐⭐ {{ rating }}</span> -->
+    </div>
+
+    <button
+      *ngIf="showButton"
+      class="product-order__button"
+      (click)="removeFromCart.emit(this)"
+    >
+      Remove from Cart
+    </button>
+  </div>
+</div>

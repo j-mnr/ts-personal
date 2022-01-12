@@ -1,0 +1,42 @@
+<div class="payment">
+  <div class="payment__container">
+    <h1>
+      Checkout (<a routerLink="/checkout">{{ cartItemTotal }} items</a>)
+    </h1>
+
+    <section *ngIf="user$ | async as user" class="payment__section">
+      <div class="payment__title">
+        <h3>{{ user.email || "ENTER YOUR ADDRESS" }}</h3>
+      </div>
+      <div class="payment__address">
+        <p>{{ user.firstName }} {{ user.lastName }}</p>
+        <p>{{ user.address }}</p>
+      </div>
+    </section>
+
+    <section class="payment__section">
+      <div class="payment__title">
+        <h3>Review Items and Delivery</h3>
+      </div>
+      <div *ngFor="let product of products" class="payment__items">
+        <app-product-order
+          [product]="product"
+          [showButton]="false"
+        ></app-product-order>
+      </div>
+    </section>
+
+    <div class="payment__section">
+      <div class="payment__details">
+        <div class="payment__title">
+          <h3>Payment Method</h3>
+        </div>
+
+        <div class="payment__price-container">
+          <app-create-token (stripeToken)="charge($event)"></app-create-token>
+        </div>
+        <!-- TODO if an error occurs we need to show it off to the end user, set something up for it-->
+      </div>
+    </div>
+  </div>
+</div>

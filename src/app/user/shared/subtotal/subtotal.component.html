@@ -1,0 +1,8 @@
+<div class="subtotal">
+  <button routerLink="/payment" class="subtotal__button">
+    Proceed to Checkout
+  </button>
+  <h3>{{orderTotal | currency}} </h3>
+  <button class="subtotal__button" 
+    (click)="clearCart.emit()">Clear cart</button>
+</div>

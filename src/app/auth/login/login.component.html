@@ -1,0 +1,51 @@
+<main class="register-container">
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="form__group">
+      <label id="enterUsername" for="username">Username</label>
+      <input
+        [formControlName]="'username'"
+        id="username"
+        type="text"
+        maxlength="20"
+        autocomplete="username"
+      />
+      <span
+        *ngIf="
+          !loginForm.get('username')?.valid &&
+          loginForm.get('username')?.touched
+        "
+        >Please provide a valid username</span
+      >
+    </div>
+
+    <div class="form__group">
+      <label for="password">Password</label>
+      <input
+        [formControlName]="'password'"
+        id="password"
+        type="password"
+        maxlength="20"
+        autocomplete="current-password"
+      />
+      <a routerLink="/reset-password">Forgot password?</a>
+      <span
+        *ngIf="
+          !loginForm.get('password')?.valid &&
+          loginForm.get('password')?.touched
+        "
+        >Please provide a valid password</span
+      >
+    </div>
+
+    <!-- TODO make this better looking -->
+    <div class="form__error" *ngIf="isError">
+      Login Failed. Please check your credentials and try again.
+    </div>
+
+    <div class="form__group">
+      <button type="submit" [disabled]="!this.loginForm.valid" [className]="this.loginForm.valid? 'enabled' : 'disabled'">
+        Login
+      </button>
+    </div>
+  </form>
+</main>

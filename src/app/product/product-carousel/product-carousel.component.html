@@ -1,0 +1,47 @@
+<div
+  id="{{ productEndpoint }}"
+  class="carousel-container"
+  [ngStyle]="{ 'min-height.px': componentHeight }"
+>
+  <h2>
+    {{ productTitle }}
+    <i
+      (click)="toggleExpand()"
+      id="expand-carousel"
+      [ngClass]="expanded ? 'fas fa-chevron-down' : 'fas fa-chevron-right'"
+      [ngStyle]="{ visibility: visibilityStatus }"
+    ></i>
+  </h2>
+  <div
+    *ngIf="!expanded"
+    class="carousel-arrow arrow-left"
+    [ngStyle]="{ opacity: leftArrowOpacity }"
+  >
+    <i (click)="shiftLeft()" class="fas fa-arrow-circle-left fa-3x"></i>
+  </div>
+  <div
+    class="card-carousel"
+    [ngStyle]="{ transform: 'translateY(' + alignCarousel + 'px)' }"
+  >
+    <div
+      class="card-flex"
+      [ngStyle]="{ transform: 'translateX(' + shiftPixels + 'px)' }"
+      [ngStyle]="{ 'flex-wrap': wrapType }"
+    >
+      <div class="card-box" *ngFor="let product of fullProducts">
+        <app-product-card
+          id="{{ product.productId }}"
+          (addToCart)="addToCart($event)"
+          [productCard]="product"
+        ></app-product-card>
+      </div>
+    </div>
+  </div>
+  <div
+    *ngIf="!expanded"
+    class="carousel-arrow arrow-right"
+    [ngStyle]="{ opacity: rightArrowOpacity }"
+  >
+    <i (click)="shiftRight()" class="fas fa-arrow-circle-right fa-3x"></i>
+  </div>
+</div>

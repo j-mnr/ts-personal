@@ -1,0 +1,28 @@
+<!-- <div (click)="addToCart.emit(productId)" class="product-card"> -->
+<div
+  class="product-card"
+>
+  <img
+    class="product-logo"
+    src="https://circuit-commerce-assets.s3.amazonaws.com/{{
+      productCard.brand
+    }}.png"
+    alt="product logo"
+  />
+  <h5 class="product-title">{{ productCard.abbreviatedTitle }}</h5>
+
+  <button class="add-to-cart" (click)="addItemToCart( productCard.productId )"><i class="fas fa-cart-plus fa-lg"></i></button>
+  <button class="add-to-wishlist"><i class="fas fa-save"></i> WishList</button>
+
+  <div class="product-price-container">
+    <p class="product-price">${{ productCard.price }}</p>
+  </div>
+  <img
+    routerLink="product-details/{{ productCard.productId }}"
+    class="product-img img-wide"
+    src="https://circuit-commerce-assets.s3.amazonaws.com/{{
+      productCard.modelNumber
+    }}.png"
+    alt="product image"
+  />
+</div>

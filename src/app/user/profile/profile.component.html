@@ -1,0 +1,31 @@
+<main class="user-profile">
+  <h1>USER PROFILE</h1>
+
+  <div class="info__box">
+    <div class="user__info">
+      <h3>Username:</h3>
+      <h4>{{ curUserName }}</h4>
+    </div>
+    <div class="user__info">
+      <h3>First Name:</h3>
+      <h4>{{ curFirstName }}</h4>
+    </div>
+    <div class="user__info">
+      <h3>Last Name:</h3> 
+      <h4>{{ curLastName }}</h4>
+    </div>
+    <div class="user__info">
+      <h3>Email Address:</h3>
+      <h4>{{ curEmail }}</h4>
+    </div>
+    <div class="user__info">
+      <h3>Street Address:</h3>
+      <h4>{{ curAddress }}</h4>
+    </div>
+  </div>
+
+  <div class="user__info">
+    <button (click)="editProfile()">Edit Profile Information</button>
+  </div>
+</main>
+

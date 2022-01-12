@@ -1,0 +1,72 @@
+body {
+  font-family: "Electrolize", sans-serif;
+  background-color: var(--darkest-grey);
+}
+
+#expand-carousel {
+  cursor: pointer;
+  visibility: visible;
+}
+
+.carousel-container {
+  max-width: 1560px;
+  min-width: 1560px;
+  max-height: 450px;
+  margin: auto;
+  margin-bottom: 50px;
+  background-color: var(--darkest-grey);
+  border-radius: 25px;
+  border-color: var(--turqoise);
+  border-style: inset;
+  border-width: 2px;
+}
+
+.card-carousel {
+  overflow-x: hidden;
+  overflow-wrap: normal;
+  transform: translateY(-10px);
+}
+
+.card-flex {
+  display: flex;
+  flex-wrap: nowrap;
+  transform: translateX(0);
+  transition: ease-in 0.5s;
+  align-items: baseline;
+}
+
+.card-box {
+  padding-left: 40px;
+  padding-top: 20px;
+}
+
+.carousel-arrow {
+  margin: 10px;
+  position: relative;
+  color: #4ecca3;
+  cursor: pointer;
+  z-index: 1;
+  width: fit-content;
+}
+
+.arrow-left {
+  top: 174px;
+  cursor: pointer;
+}
+
+.arrow-right {
+  right: -1494px;
+  bottom: 244px;
+  justify-content: right;
+  cursor: pointer;
+}
+
+img {
+  background-color: black;
+  margin: 50px;
+}
+
+h2 {
+  padding: 20px 0px 0px 40px;
+  color: var(--turqoise);
+}

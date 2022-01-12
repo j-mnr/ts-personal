@@ -1,0 +1,154 @@
+<main>
+  <div class="top-container">
+    <div class="product-container">
+      <section class="product">
+        <h3 class="product__title">
+          {{fullProduct?.title}}
+        </h3>
+        <div class="product__social">
+          <div class="product__reviews">
+            <span>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </span>
+          </div>
+          <br />
+        </div>
+        <div class="brand-logo-container">
+          <img
+            class="brand-logo"
+            src={{brandURL}}
+          />
+        </div>
+        <br />
+        <div class="product__info">
+          <strong>In Stock</strong>
+          <div class="product__shipping">Ships from United States</div>
+        </div>
+        <img src="../../../assets/images/sponsor.jpg" alt="" />
+        <br /><br />
+        <h4 class="product__detail">Product Details:</h4>
+        <div class="product__synopsis">
+          <li *ngFor="let detailEntry of detailEntries | keyvalue">
+            <span class="product__detail">{{ detailEntry.key }}:</span> {{ detailEntry.value }}
+          </li>
+        </div>
+      </section>
+    </div>
+    <aside class="checkout">
+      <div class="product-img-container">
+        <img
+          class="product-img"
+          src={{productURL}}
+        />
+      </div>
+      <div class="checkout__pane">
+        <div class="checkout__seller"><h3>Sold by: Circuit-Commerce</h3></div>
+        <div class="checkout__price">${{ fullProduct?.price }}</div>
+      </div>
+      <br />
+      <div class="checkout__buy">
+        <button (click)="addToCart(productId)" class="checkout__buy-btn">
+          <i class="fas fa-cart-plus"></i>ADD TO CART
+        </button>
+        <button class="add-to-wishlist"><i class="fas fa-save checkout__buy-btn"></i>ADD TO WISHLIST</button>
+      </div>
+      <div class="checkout__btn-group"></div>
+    </aside>
+  </div>
+
+  <section class="reviews">
+    <h2>Reviews by Previous Customers:</h2>
+
+    <article class="review">
+      <div class="review__main">
+        <aside class="review__user">user</aside>
+        <span>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </span>
+        <p>
+          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias
+          blanditiis veritatis eveniet in veniam beatae sint, nobis inventore
+          cumque temporibus hic eius sed pariatur quam illum vitae quidem odio.
+          Reiciendis.Quidem sunt eum asperiores molestiae neque explicabo sit
+          tempora reiciendis deserunt alias odio optio, temporibus delectus
+          labore culpa aspernatur quae veniam quaerat eveniet expedita, saepe
+          nulla maxime. Cum, modi officia."
+        </p>
+      </div>
+    </article>
+
+    <article class="review">
+      <div class="review__main">
+        <aside class="review__user">user</aside>
+        <span>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </span>
+        <p>
+          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias
+          blanditiis veritatis eveniet in veniam beatae sint, nobis inventore
+          cumque temporibus hic eius sed pariatur quam illum vitae quidem odio.
+          Reiciendis.Quidem sunt eum asperiores molestiae neque explicabo sit
+          tempora reiciendis deserunt alias odio optio, temporibus delectus
+          labore culpa aspernatur quae veniam quaerat eveniet expedita, saepe
+          nulla maxime. Cum, modi officia."
+        </p>
+      </div>
+    </article>
+
+    <article class="review">
+      <div class="review__main">
+        <aside class="review__user">user</aside>
+        <span>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </span>
+        <p>
+          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias
+          blanditiis veritatis eveniet in veniam beatae sint, nobis inventore
+          cumque temporibus hic eius sed pariatur quam illum vitae quidem odio.
+          Reiciendis.Quidem sunt eum asperiores molestiae neque explicabo sit
+          tempora reiciendis deserunt alias odio optio, temporibus delectus
+          labore culpa aspernatur quae veniam quaerat eveniet expedita, saepe
+          nulla maxime. Cum, modi officia."
+        </p>
+      </div>
+    </article>
+
+    <article class="review">
+      <div class="review__main">
+        <aside class="review__user">user</aside>
+        <span>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </span>
+        <p>
+          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias
+          blanditiis veritatis eveniet in veniam beatae sint, nobis inventore
+          cumque temporibus hic eius sed pariatur quam illum vitae quidem odio.
+          Reiciendis.Quidem sunt eum asperiores molestiae neque explicabo sit
+          tempora reiciendis deserunt alias odio optio, temporibus delectus
+          labore culpa aspernatur quae veniam quaerat eveniet expedita, saepe
+          nulla maxime. Cum, modi officia."
+        </p>
+      </div>
+    </article>
+  </section>
+</main>

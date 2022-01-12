@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg id="master-artboard" viewBox="0 0 1400 980" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" style="enable-background:new 0 0 336 235.2;" width="1400px" height="980px">
+  <g transform="matrix(1.27656888961792, 0, 0, 0.8718428015708923, 642.8781428588759, 66.80213849610752)">
+    <g transform="matrix(3.2407407760620117, 0, 0, 3.2407407760620117, -56.22048166198937, 146.88413953979813)">
+      <g id="Logo">
+        <path d="M 29.6 34.23 L 69.410004 59.380001 L 88.730003 140.160004 L 192.330002 140.160004" class="cls-1" style="fill: none; stroke: rgb(92, 193, 158); stroke-miterlimit: 10; stroke-width: 6px;" />
+        <path d="M 81.760002 111.010002 L 165.679993 111.010002" class="cls-1" style="fill: none; stroke: rgb(92, 193, 158); stroke-miterlimit: 10; stroke-width: 6px;" />
+        <path d="M 74.230003 80.529999 L 141.199997 80.529999" class="cls-1" style="fill: none; stroke: rgb(92, 193, 158); stroke-miterlimit: 10; stroke-width: 6px;" />
+        <path d="M 29.6 34.23 L 69.410004 59.380001 L 88.730003 140.160004 L 192.330002 140.160004" class="cls-2" style="fill: none; stroke-miterlimit: 10; stroke: rgb(35, 31, 32); stroke-width: 2px;" />
+        <path d="M 81.760002 111.010002 L 165.679993 111.010002" class="cls-2" style="fill: none; stroke-miterlimit: 10; stroke: rgb(35, 31, 32); stroke-width: 2px;" />
+        <path d="M 74.230003 80.529999 L 141.199997 80.529999" class="cls-2" style="fill: none; stroke-miterlimit: 10; stroke: rgb(35, 31, 32); stroke-width: 2px;" />
+        <path d="M 124.880003 171.639999 A 12.33 12.33 0 0 1 112.550003 183.969999 A 12.33 12.33 0 0 1 100.220003 171.639999 A 12.33 12.33 0 0 1 112.550003 159.309999 A 12.33 12.33 0 0 1 124.880003 171.639999 Z" class="cls-3" style="stroke: rgb(92, 193, 158); stroke-miterlimit: 10; fill: rgb(92, 193, 158);" />
+        <path d="M 188.270002 171.639999 A 12.33 12.33 0 0 1 175.940002 183.969999 A 12.33 12.33 0 0 1 163.610003 171.639999 A 12.33 12.33 0 0 1 175.940002 159.309999 A 12.33 12.33 0 0 1 188.270002 171.639999 Z" class="cls-3" style="stroke: rgb(92, 193, 158); stroke-miterlimit: 10; fill: rgb(92, 193, 158);" />
+        <path d="M 147.699997 80.529999 A 6.5 6.5 0 0 1 141.199997 87.029999 A 6.5 6.5 0 0 1 134.699997 80.529999 A 6.5 6.5 0 0 1 141.199997 74.029999 A 6.5 6.5 0 0 1 147.699997 80.529999 Z" class="cls-3" style="stroke: rgb(92, 193, 158); stroke-miterlimit: 10; fill: rgb(92, 193, 158);" />
+        <path d="M 172.179993 111.010002 A 6.5 6.5 0 0 1 165.679993 117.510002 A 6.5 6.5 0 0 1 159.179993 111.010002 A 6.5 6.5 0 0 1 165.679993 104.510002 A 6.5 6.5 0 0 1 172.179993 111.010002 Z" class="cls-3" style="stroke: rgb(92, 193, 158); stroke-miterlimit: 10; fill: rgb(92, 193, 158);" />
+        <path d="M 198.830002 140.160004 A 6.5 6.5 0 0 1 192.330002 146.660004 A 6.5 6.5 0 0 1 185.830002 140.160004 A 6.5 6.5 0 0 1 192.330002 133.660004 A 6.5 6.5 0 0 1 198.830002 140.160004 Z" class="cls-3" style="stroke: rgb(92, 193, 158); stroke-miterlimit: 10; fill: rgb(92, 193, 158);" />
+        <path d="M 36.1 34.23 A 6.5 6.5 0 0 1 29.6 40.73 A 6.5 6.5 0 0 1 23.1 34.23 A 6.5 6.5 0 0 1 29.6 27.73 A 6.5 6.5 0 0 1 36.1 34.23 Z" class="cls-3" style="stroke: rgb(92, 193, 158); stroke-miterlimit: 10; fill: rgb(92, 193, 158);" />
+      </g>
+      <g id="Text" />
+    </g>
+  </g>
+</svg>

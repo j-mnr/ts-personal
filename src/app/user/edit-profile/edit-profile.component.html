@@ -1,0 +1,55 @@
+<main class="register-container">
+  <h1>EDIT USER PROFILE</h1>
+  <form [formGroup]="updateUser" (ngSubmit)="update()">
+
+    <div class="form__group">
+      <label for="firstName" ng-hide="!inEdit">Update First Name</label>
+      <input
+        [formControlName]="'newFirstName'"
+        id="firstName"
+        type="text"
+        maxlength="30"
+        value="{{ curFirstName }}"
+      />
+    </div>
+
+    <div class="form__group">
+      <label for="lastName">Update Last Name</label>
+      <input
+        [formControlName]="'newLastName'"
+        id="lastName"
+        type="text"
+        maxlength="30"        
+        value="{{ curLastName }}"
+      />
+    </div>
+
+    <div class="form__group">
+      <label for="email">Update Email</label>
+      <input
+        [formControlName]="'newEmail'"
+        id="email"
+        type="text"
+        maxlength="30"
+        value="{{ curEmail }}"
+      />
+    </div>
+
+    <div class="form__group">
+      <label for="address">Update Address</label>
+      <input
+        [formControlName]="'newAddress'"
+        id="address"
+        type="text"
+        maxlength="30"
+        value="{{ curAddress }}"
+      />
+    </div>
+
+    <div class="form__group">
+      <button type="submit">Update Info</button>
+    </div>
+
+  </form>
+</main>
+

@@ -1,0 +1,7 @@
+.passwords_match > input{
+   box-shadow: 5px 0px 15px var(--turqoise); 
+}
+
+.passwords_no_match > input {
+  box-shadow: 5px 0px 15px #cc634e;
+}

@@ -1,0 +1,16 @@
+.checkout__button {
+  background: var(--dark-turqoise);
+  border-radius: 999px;
+  border: 1px solid var(--darkest-grey);
+  color: var(--light-grey);
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 200px;
+  padding: 10px;
+}
+
+.checkout__button:hover,
+.checkout__button:focus {
+  background-color: var(--turqoise);
+  text-shadow: var(--text-shadow);
+}

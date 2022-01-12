@@ -1,0 +1,188 @@
+@import url("normalize.css");
+/* You can add global styles to this file, and also import other style files */
+
+/* This is how you declare variables in css, this will allow for both of you to
+keep consistent on things like colors, border-radius, outlines, etc. */
+:root {
+  /* The main colors for 'dark mode' aka default for the sight, we can add the other 'light' pallete later once we have the MVP */
+  --darkest-grey: #232931;
+  --dark-grey: #393e46;
+  --light-turqoise: #5dffc9;
+  --turqoise: #4ecca3;
+  --dark-turqoise: #379274;
+  --light-grey: #eeeeee;
+  --bor-rad: 8px;
+  --text-shadow: 0 0 5px black;
+  --deco-border: 1px solid var(--light-turqoise);
+}
+
+/* Global resets that many Frontend Engineers work with the font attributes
+are a little too restrictive imo, but enable them if you want */
+*,
+*::before,
+*::after {
+  /* font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit; */
+  border: 0;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+html {
+  background-color: var(--dark-grey);
+  color: var(--light-grey);
+}
+
+body {
+  font-family: "Electrolize", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: linear-gradient(to bottom, #393e46 50%, #397b6a 100%);
+}
+
+.content {
+  min-height: 100vh;
+}
+
+/* example of how to call variables in css */
+a {
+  color: var(--light-grey);
+  text-decoration: none;
+}
+
+/* Will underline an anchor tag when a user hovers over it or uses tab */
+a:hover,
+a:focus {
+  color: var(--turqoise);
+  text-decoration: underline;
+}
+
+/* Only allows 55 characters to be on one line before wrapping */
+p {
+  max-width: 55ch;
+}
+
+input.ng-invalid.ng-touched {
+  box-shadow: 0 0 5px 2px #fb4545;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  display: none;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--dark-turqoise);
+  border-radius: 9999px;
+  border: 1px solid var(--darkest-grey);
+}
+
+/* Forms Stuff */
+form {
+  background-color: var(--darkest-grey);
+  border-radius: var(--bor-rad);
+  padding: 20px;
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.form__group a {
+  text-align: right;
+}
+
+.form__group a:hover,
+.form__group a:focus {
+  color: var(--light-turqoise);
+}
+
+.form__group button {
+  background: var(--dark-turqoise);
+  border-radius: var(--bor-rad);
+  border: 1px solid var(--dark-turqoise);
+  color: var(--light-grey);
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.form__group button:hover,
+.form__group button:focus {
+  background-color: var(--turqoise);
+  text-shadow: var(--text-shadow);
+}
+
+.form__group input {
+  border-radius: var(--bor-rad);
+  margin: 10px 0 10px 5px;
+  padding: 4px;
+}
+
+.form__group label {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.form__group > span {
+  position: absolute;
+  bottom: 0;
+}
+
+.form__error {
+  color: red;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.register-container {
+  color: var(--light-grey);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.register-container > form {
+  background-color: var(--darkest-grey);
+  border-radius: var(--bor-rad);
+  padding: 20px;
+  width: 600px;
+  height: fit-content;
+
+  border-color: var(--turqoise);
+  border-style: inset;
+  border-width: 5px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+
+  box-shadow: 0px 0px 15px black;
+}
+
+.form__group button.disabled {
+  background: var(--dark-grey);
+}
+
+.form__group button.disabled:hover {
+  cursor: default;
+  background: var(--dark-grey);
+}
+
+.form__group button.enabled:hover {
+  box-shadow: 10px 0px 15px var(--dark-turqoise);
+}

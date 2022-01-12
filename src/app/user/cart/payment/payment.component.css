@@ -1,0 +1,50 @@
+.payment {
+  background-color: var(--darkest-grey);
+}
+
+.payment > h1 {
+  background-color: var(--darkest-grey);
+  border-bottom: 1px solid var(--light-grey);
+  font-weight: 400;
+  padding: 10px;
+  text-align: center;
+}
+
+.payment__container > h1 a {
+  text-decoration: none;
+}
+
+.payment__price-container button {
+  color: var(--light-grey);
+}
+
+.payment__section {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--light-grey);
+  margin: 0, 20px;
+  padding: 20px;
+}
+
+.payment__title {
+  flex: 0.2;
+}
+
+.payment__address,
+.payment__items,
+.payment__details {
+  flex: 0.8;
+}
+
+.payment__details {
+  width: 500px;
+  margin: auto;
+}
+
+.payment__details > form {
+  max-width: 400px;
+}
+
+.payment__details > h3 {
+  padding-bottom: 20px;
+}

@@ -1,0 +1,59 @@
+footer {
+  background: var(--darkest-grey);
+  /* background: linear-gradient(to bottom, #397b6a 0%, #393e46 70%); */
+  height: 10%;
+  margin-top: auto;
+  position: relative;
+  font-size: 18px;
+  border-top: 2px solid var(--light-turqoise);
+}
+
+h3 {
+  text-decoration: underline;
+  font-size: 24px;
+  margin-bottom: 0.5em;
+}
+
+div {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.container div {
+  text-align: center;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+}
+
+/***********************
+ * Contributers Column *
+ ***********************/
+
+.container div.contributers {
+  display: flex;
+}
+
+ul.names {
+  text-align: right;
+}
+
+li a {
+  padding-left: 0.5em;
+}
+
+/******************
+ * Contact Column *
+ ******************/
+.contact {
+  /* text-align: left; */
+}

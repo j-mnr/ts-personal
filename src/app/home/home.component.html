@@ -1,0 +1,7 @@
+<div class="welcomepage" *ngFor="let index of productTitles">
+  <app-product-carousel
+    [filterName]="filterName"
+    [productEndpoint]="index.endpoint"
+    [productTitle]="index.title"
+  ></app-product-carousel>
+</div>

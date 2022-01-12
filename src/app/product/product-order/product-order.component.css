@@ -1,0 +1,43 @@
+.product-order {
+  display: flex;
+  margin: 20px 0;
+}
+
+.product-order__brand {
+  max-width: 100px;
+}
+
+.product-order__button {
+  background: var(--dark-turqoise);
+  border-radius: 2px;
+  border: 1px solid var(--darkest-grey);
+  color: var(--light-grey);
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.product-order__button:hover {
+  background-color: var(--turqoise);
+  text-shadow: var(--text-shadow);
+}
+
+.product-order__image {
+  border-radius: var(--bor-rad);
+  object-fit: contain;
+  width: 280px;
+  height: 280px;
+}
+
+.product-order__info {
+  padding-left: 20px;
+}
+
+.product-order__rating {
+  display: flex;
+}
+
+.product-order__title {
+  font-size: 17px;
+  font-weight: 800;
+}

@@ -1,0 +1,29 @@
+<main class="cart">
+  <div class="cart__left">
+    <div>
+      <h2 class="cart__welcome">
+        Hello, <span class="cart__username">{{ username }}</span>
+      </h2>
+      <h1 class="cart__title">Your Previous Purchases</h1>
+      <div *ngIf="totalOrderInstances == 0" class="cart__empty">
+        <h1>You have no previous purchases...</h1>
+      </div>
+      <div
+        *ngFor="let order of productOrders$ | async; index as i"
+        class="orders"
+      >
+        <h2 class="cart__orderdate">
+          {{ order.orderTime * 1000 | date: "medium"
+          }}<a href="{{ order.receiptUrl }}">View Receipt</a>
+        </h2>
+        <div
+          *ngFor="let product of order.productList; index as i"
+          class="orders__products"
+        >
+          <app-product-order [index]="i" [product]="product">
+          </app-product-order>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

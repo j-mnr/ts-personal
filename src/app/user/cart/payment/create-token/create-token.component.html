@@ -1,0 +1,9 @@
+<ngx-stripe-card
+  [options]="cardOptions"
+  [elementsOptions]="elementsOptions"
+></ngx-stripe-card>
+<!-- TODO figure out if Ng has a way to format currency, and then take the total of the entire order and format it accordingly -->
+<!-- TODO make this button disabled while processing so that the end user cannot send multiple requests and charge themselves for multiple orders -->
+<button class="checkout__button" type="submit" (click)="createToken()">
+  <span>{{ isProcessing ? "Processing" : "Buy Now" }}</span>
+</button>
