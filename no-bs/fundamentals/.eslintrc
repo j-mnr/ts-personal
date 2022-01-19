@@ -1,0 +1,7 @@
+rules: {
+  "@typescript-eslint/no-restricted-imports": "off",
+  "@typescript-eslint/consistent-type-imports": "off",
+  "@typescript-eslint/triple-slash-reference": "off",
+  "@typescript-eslint/no-duplicate-imports": "off",
+  "@typescript-eslint/no-var-requires": "off"
+}
