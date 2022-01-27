@@ -1,0 +1,121 @@
+body {
+  background-image: url("../assets/pexels-pixabay-219998.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.footer__links a {
+  font-size: 12px;
+  margin: 0 5px;
+}
+
+.login {
+  flex-grow: 1;
+  overflow: auto;
+  margin: 0 auto;
+}
+
+.login__button { /* TODO DISABLE */
+  color: aliceblue;
+  cursor: pointer;
+  background-color: #444;
+  border: 2px solid #666;
+  border-radius: 9999px;
+  margin: 60px;
+  padding: 10px;
+  width: 140px;
+}
+
+.login__button:hover,
+.login__button:focus {
+  background-color: #555;
+}
+
+.login__content {
+  background-color: rgba(24, 26, 27, 0.8);
+  border: 1px solid rgba(94, 96, 97, 0.8);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 500px;
+}
+
+.login__content h1 {
+  font-size: 22px;
+  font-weight: bold;
+  color: aliceblue;
+  margin: 20px auto;
+}
+
+.login__content label {
+  display: block;
+  color: #bbbbbb;
+}
+
+.login__content input:focus {
+  box-shadow: 0 0 2px 2px var(--secondary);
+}
+
+.login__credentials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login__credentials a {
+  font-size: 10px;
+  margin-left: auto;
+}
+
+.login__credentials div {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.login__credentials input {
+  background-color: #111;
+  border-radius: 9999px;
+  color: aliceblue;
+  padding: 10px 20px;
+  margin: 7px 0;
+}
+
+.login__register {
+  background-color: #222;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #bbbbbb;
+  margin-top: auto;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.main__container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 100vh;
+}
+
+@media only screen and (max-width: 650px) {
+  .login {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .login__register {
+    flex-direction: column;
+  }
+
+  .login__content {
+    flex-grow: 1;
+    width: 100%;
+  }
+}

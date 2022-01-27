@@ -1,0 +1,90 @@
+body {
+  background-image: url("../assets/pexels-eberhard-grossgasteiger-443446.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.dropbtn {
+  background-color: #51525a;
+  border-radius: 9999px;
+  color: aliceblue;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn i {
+  font-size: 14px;
+  color: var(--secondary);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin: 5px 0 5px 40px;
+  text-align: center;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: auto;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 4px;
+  color: aliceblue;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content li {
+  color: aliceblue;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content li:hover {
+  background-color: rgba(133, 133, 133, 0.7);
+  cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #696b69;
+}
+
+.dropbtn {
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.fa-search {
+  color: #51525a;
+  margin-left: 3px;
+}
+
+.hidden {
+  display: none;
+}
+
+.reimbursement__status {
+  background-color: #111;
+  box-shadow: 0 0 1px 1px #666;
+  border-radius: 9999px;
+  color: aliceblue;
+  margin-top: 45px;
+  padding: 5px;
+  min-width: 160px;
+}
+
+@media only screen and (max-width: 650px) {
+  .dropbtn {
+    font-size: 10px;
+  }
+}

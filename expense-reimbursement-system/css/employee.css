@@ -1,0 +1,197 @@
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-image: url("../assets/pexels-paul-ijsendoorn-33041.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  max-height: 100%;
+}
+
+details {
+  width: 100%
+}
+
+footer {
+  margin-top: auto;
+  width: 100%;
+}
+
+footer a {
+  padding: 0 8px;
+}
+
+figure img {
+  display: block;
+  max-height: 400px;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: bolder;
+  padding: 8px 0;
+  text-transform: capitalize;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 6px 0;
+  text-transform: capitalize;
+}
+
+h4 {
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+header {
+  background-image: radial-gradient(
+    circle 908px at 5.9% 15.3%,
+    rgba(109, 104, 110, 1) 6.9%,
+    rgba(56, 56, 58, 0.96) 87.5%
+  );
+  border-radius: 4px;
+  display: flex;
+  padding: 30px 0;
+  width: 80%;
+}
+
+i {
+  color: aliceblue;
+  font-size: 20px;
+}
+
+main {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid var(--outline);
+  border-radius: 5px;
+  color: aliceblue;
+  flex-grow: 1;
+  overflow: overlay;
+  width: 80%;
+  max-height: 80%;
+}
+
+main::-webkit-scrollbar {
+  display: none;
+}
+
+nav {
+  background-color: rgba(157, 203, 255, 0.7);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 30px 0;
+  width: 80%;
+}
+
+nav a {
+  background-color: #51525a;
+  border-radius: 9999px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  color: aliceblue;
+  padding: 12px;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #696b69;
+  text-decoration: none;
+}
+
+nav a i {
+  font-size: 14px;
+  color: var(--secondary);
+}
+
+.logo {
+  margin-right: auto;
+  padding-left: 20px;
+}
+
+.nav__link a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  font-size: 16px;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.nav__link span:hover,
+.nav__link a:focus span {
+  text-decoration: underline;
+}
+
+.reimbursement {
+  border-top: 1px solid aliceblue;
+  border-bottom: 1px solid aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.reimbursement__container {
+  display: flex;
+  justify-content: space-around;
+  overflow-wrap: break-word;
+}
+
+.reimbursement__description {
+  text-decoration: underline;
+}
+
+.reimbursement__info {
+  max-width: 40ch;
+}
+
+@media only screen and (max-width: 650px) {
+  header {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  figure {
+    padding-top: 30px;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  nav {
+    font-size: 10px;
+    padding: 8px 0;
+    width: 100%;
+  }
+
+  .logo {
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav__link a {
+    width: 45px;
+    font-size: 12px;
+    justify-content: space-around;
+  }
+
+  .reimbursement__container {
+    flex-direction: column;
+  }
+}

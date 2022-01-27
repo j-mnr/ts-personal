@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/employee.css" />
+    <link rel="stylesheet" href="../css/addReimbursement.css" />
+    <script defer src="../js/addReimbursement.js"></script>
+    <title>Add Reimbursement</title>
+  </head>
+  <body>
+    <form id="reimbForm">
+      <fieldset>
+        <legend>Reimbursement</legend>
+        <label for="amount">Amount</label>
+        <div class="currency-box">
+          <input
+            id="amount"
+            name="amount"
+            step="any"
+            type="number"
+            min="1"
+            max="500"
+            required
+          />
+          <i>$</i>
+        </div>
+        <label for="description">Description</label>
+        <textarea
+          name="description"
+          id="description"
+          cols="40"
+          rows="6"
+          maxlength="255"
+          required
+        ></textarea>
+        <label for="receipt">Receipt</label>
+        <input id="receipt" name="receipt" type="file" />
+        <label for="type">Type</label>
+        <select name="type" id="type" required>
+          <option value="LODGING">Lodging</option>
+          <option value="TRAVEL">Travel</option>
+          <option value="FOOD">Food</option>
+          <option value="OTHER">Other</option>
+        </select>
+        <button id="submitBtn" type="submit">Submit</button>
+      </fieldset>
+    </form>
+    <footer>
+      <div class="footer__links">
+        <a href="#">Privacy</a>
+        <a href="#">Legal</a>
+        <a href="#">Update Your Security Profile</a>
+      </div>
+      <div class="footer__info">
+        Copyright <span style="font-weight: lighter">&COPY;</span> 2020-2021
+        ERS, Inc. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>

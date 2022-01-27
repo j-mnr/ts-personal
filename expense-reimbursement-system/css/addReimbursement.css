@@ -1,0 +1,126 @@
+body {
+  background-image: url("../assets/pexels-harrison-candlin-2441454.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid aliceblue;
+  border-radius: 4px;
+  width: 80%;
+}
+
+fieldset * {
+  padding: 10px 0;
+}
+
+input {
+  background-color: #111;
+  border-radius: 9999px;
+  color: aliceblue;
+  padding: 10px 20px;
+  margin: 7px 0;
+}
+
+input:focus {
+  box-shadow: 0 0 2px 2px var(--secondary);
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+label {
+  font-size: 20px;
+}
+
+legend {
+  font-size: 38px;
+}
+
+textarea {
+  border-radius: 4px;
+  background-color: #111;
+  color: aliceblue;
+  padding: 10px 20px;
+  margin: 7px 0;
+  resize: none;
+}
+
+textarea:focus {
+  box-shadow: 0 0 2px 2px var(--secondary);
+}
+
+textarea::-webkit-scrollbar {
+  display: none;
+}
+
+label + .currency-box {
+  padding: 0;
+}
+
+.currency-box {
+  font-size: 18px;
+  position: relative;
+}
+
+.currency-box i {
+  position: absolute;
+  display: block;
+  top: 50%;
+  transform: translateY(-54%);
+  font-size: 18px;
+  padding-left: 8px;
+  text-align: right;
+}
+
+#amount::-webkit-inner-spin-button,
+#amount::-webkit-outer-spin-button {
+  display: none;
+}
+
+#reimbForm {
+  background-color: rgba(24, 26, 27, 0.8);
+  border-radius: 6px;
+  box-shadow: 1px 1px 1px 1px rgba(112, 128, 144, 0.651);
+  width: 500px;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 30px 40px;
+  margin: auto;
+}
+
+#submitBtn {
+  background-color: #444;
+  border-radius: 9999px;
+  color: aliceblue;
+  cursor: pointer;
+  padding: 10px;
+  margin-top: 40px;
+  width: 140px;
+  border: 2px solid #666;
+}
+
+#submitBtn:hover,
+#submitBtn:focus {
+  background-color: #555;
+}
+
+#type {
+  background-color: #111;
+  box-shadow: 0 0 1px 1px #666;
+  border-radius: 9999px;
+  color: aliceblue;
+  margin-top: 5px;
+  padding: 5px;
+  min-width: 160px;
+}

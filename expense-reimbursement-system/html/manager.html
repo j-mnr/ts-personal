@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/employee.css" />
+    <link rel="stylesheet" href="../css/manager.css" />
+    <script defer src="../js/manager.js"></script>
+    <title>Finance Manager Page</title>
+  </head>
+  <body>
+    <header>
+      <span class="logo"> ERS&REG; </span>
+      <div class="nav__link">
+        <a href="#">
+          <i class="fas fa-address-book"></i><span>Contacts</span>
+        </a>
+      </div>
+      <div class="nav__link">
+        <a href="#">
+          <i class="fas fa-calendar-alt"></i>
+          <span>Calendar</span>
+        </a>
+      </div>
+      <div class="nav__link">
+        <a href="#">
+          <i class="fas fa-question-circle"></i><span>Support</span>
+        </a>
+      </div>
+      <div class="nav__link">
+        <a href="#"><i class="fas fa-envelope"></i><span>Messages</span> </a>
+      </div>
+      <div class="nav__link">
+        <a id="Logout" href="http://localhost:8080/logout">
+          <i class="fas fa-sign-out-alt"></i><span>Log out</span>
+        </a>
+      </div>
+    </header>
+    <nav>
+      <a href="http://localhost:8080/reimbursements/add">
+        <i class="fas fa-plus"></i>
+        Add Reimbursement
+      </a>
+      <div class="dropdown">
+        <button class="dropbtn"><i class="fas fa-search"></i>Filter Status</button>
+
+        <ul class="dropdown-content">
+          <li id="all-reimbursements">All</li>
+          <li id="pending">Pending</li>
+          <li id="approved">Approved</li>
+          <li id="denied">Denied</li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+    </main>
+    <footer>
+      <div class="footer__links">
+        <a href="#">Privacy</a>
+        <a href="#">Legal</a>
+        <a href="#">Update Your Security Profile</a>
+      </div>
+      <div class="footer__info">
+        Copyright <span style="font-weight: lighter">&COPY;</span> 2020-2021
+        ERS, Inc. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
