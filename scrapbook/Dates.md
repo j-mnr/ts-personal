@@ -1,7 +1,7 @@
 # Dates
 
-All the dates we've gone on and where they were and what we ate, maybe add some comments
-on most notable things for you and pictures in between.
+All the dates we've gone on and where they were and what we ate, maybe add some
+comments on most notable things for you and pictures in between.
 
 ---
 

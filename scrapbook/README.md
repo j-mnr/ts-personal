@@ -54,7 +54,7 @@ customize it when you are ready for it.
 
 ## Roadmap
 
-- [ ] Put photo on page
+- [x] Put photo on page
 - [ ] Put photos on page
 - [ ] Put text under photo
 - [ ] Put flare around photo on screen
